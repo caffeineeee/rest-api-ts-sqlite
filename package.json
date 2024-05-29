@@ -6,21 +6,38 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "dt": "pnpm tsx src/db/drop-table.ts",
+    "ct": "pnpm tsx src/db/create-table.ts",
+    "seed": "pnpm tsx src/db/insert-seed-data.ts",
+    "mock-delete-orderId": "pnpm tsx src/utils/mock-api-request/delete-orderId.ts",
+    "mock-get-productId": "pnpm tsx src/utils/mock-api-request/get-productId.ts",
+    "mock-get-inventory": "pnpm tsx src/utils/mock-api-request/get-inventory.ts",
+    "mock-get-orderDetails": "pnpm tsx src/utils/mock-api-request/get-orderDetails.ts",
+    "mock-get-order": "pnpm tsx src/utils/mock-api-request/get-order.ts",
+    "mock-post-markAsPaid": "pnpm tsx src/utils/mock-api-request/post-markAsPaid.ts",
+    "mock-post-order": "pnpm tsx src/utils/mock-api-request/post-order.ts",
+    "mock-put-orderId": "pnpm tsx src/utils/mock-api-request/put-orderId.ts"
   },
+  "type": "module",
   "dependencies": {
-    "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.3"
+    "@libsql/client": "^0.6.0",
+    "nanoid": "^5.0.7",
+    "next": "14.2.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.3"
+    "@ngneat/falso": "^7.2.0",
+    "@types/node": "^20.12.12",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "dotenv": "^16.4.5",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "14.2.3",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3",
+    "tsx": "^4.11.0",
+    "typescript": "^5.4.5"
   }
 }
